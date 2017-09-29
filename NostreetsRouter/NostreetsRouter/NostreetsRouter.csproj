@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NostreetsRouter</RootNamespace>
     <AssemblyName>NostreetsRouter</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -83,12 +84,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NostreetsORM\NostreetsORM\NostreetsORM.csproj">
-      <Project>{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}</Project>
+    <ProjectReference Include="..\..\..\NostreetsEntities\NostreetsEntities.csproj">
+      <Project>{e1eefd20-ddc8-438a-9e3d-509d8bf7184a}</Project>
+      <Name>NostreetsEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NostreetsORM\NostreetsORM\NostreetsORM.csproj">
+      <Project>{6e132f1c-f285-4535-abee-f02fc0bd18cb}</Project>
       <Name>NostreetsORM</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\NostreetsSandbox\Nostreets Sandbox\Nostreets Services\Nostreets Services.csproj">
-      <Project>{5574610E-7F20-4793-8D34-3C2C9C1322B8}</Project>
+    <ProjectReference Include="..\..\..\NostreetsSandbox\Nostreets Sandbox\Nostreets Services\Nostreets Services.csproj">
+      <Project>{5574610e-7f20-4793-8d34-3c2c9c1322b8}</Project>
       <Name>Nostreets Services</Name>
     </ProjectReference>
   </ItemGroup>

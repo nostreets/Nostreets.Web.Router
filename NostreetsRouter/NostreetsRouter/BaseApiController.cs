@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
-using System.ComponentModel.DataAnnotations;
 using NostreetsORM.Interfaces;
 using NostreetsRouter.Interfaces;
 using System.Net.Http;
-using Nostreets_Services.Utilities;
-using Nostreets_Services.Services.Database;
 using NostreetsORM;
 using NostreetsRouter.Models.Responses;
 using System.Net;
+using NostreetsEntities;
+using Nostreets_Services.Utilities;
 
 namespace NostreetsRouter
 {
