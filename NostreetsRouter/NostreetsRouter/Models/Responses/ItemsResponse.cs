@@ -24,4 +24,19 @@ namespace NostreetsRouter.Models.Responses
 
         public List<T> Items { get; set; }
     }
+
+    public class ItemsResponse<TKey, TValue> : SuccessResponse
+    {
+        public ItemsResponse()
+        {
+
+        }
+
+        public ItemsResponse(Dictionary<TKey, TValue> items)
+        {
+            Items = items;
+        }
+
+        public Dictionary<TKey, TValue> Items { get; set; }
+    }
 }
