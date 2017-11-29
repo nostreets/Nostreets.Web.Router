@@ -50,10 +50,10 @@
       <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\NostreetsSandbox\Nostreets Sandbox\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -63,7 +63,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms">
       <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
@@ -82,10 +82,10 @@
       <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\NostreetsSandbox\Nostreets Sandbox\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
@@ -134,17 +134,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Downloads\NostreetsSandbox\NostreetsSandbox\Nostreets Sandbox\Nostreets Services\Nostreets Services.csproj">
-      <Project>{5574610e-7f20-4793-8d34-3c2c9c1322b8}</Project>
-      <Name>Nostreets Services</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\NostreetsEntities\NostreetsEntities.csproj">
-      <Project>{e1eefd20-ddc8-438a-9e3d-509d8bf7184a}</Project>
+      <Project>{f6c49237-723e-45ff-9c79-46a03ac80448}</Project>
       <Name>NostreetsEntities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\NostreetsExtensions\NostreetsExtensions\NostreetsExtensions.csproj">
+      <Project>{d75ef23c-2e65-4bf7-90d3-c21c73a3e9c3}</Project>
+      <Name>NostreetsExtensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\NostreetsORM\NostreetsORM\NostreetsORM.csproj">
-      <Project>{6e132f1c-f285-4535-abee-f02fc0bd18cb}</Project>
+      <Project>{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}</Project>
       <Name>NostreetsORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\NostreetsSandbox\Nostreets Sandbox\Nostreets Services\Nostreets Services.csproj">
+      <Project>{5574610e-7f20-4793-8d34-3c2c9c1322b8}</Project>
+      <Name>Nostreets Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
