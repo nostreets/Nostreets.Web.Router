@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NostreetsExtensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,22 +8,37 @@ namespace NostreetsRouter.Models.Responses
 {
     public class ErrorResponse : BaseResponse
     {
-        public List<String> Errors { get; set; }
+        public Dictionary<string, string[]> Errors { get; set; }
 
         public ErrorResponse(string errMsg)
         {
-            Errors = new List<string>();
+            Errors = new Dictionary<string, string[]>();
 
-            Errors.Add(errMsg);
-            this.IsSuccessful = false;
+            Errors.Add("Message", new[] { errMsg });
+            IsSuccessful = false;
         }
 
-        public ErrorResponse(IEnumerable<String> errMsg)
+        public ErrorResponse(IEnumerable<string> errMsgs)
         {
-            Errors = new List<string>();
+            Errors = new Dictionary<string, string[]>();
 
-            Errors.AddRange(errMsg);
-            this.IsSuccessful = false;
+            Errors.Add("Messages", errMsgs.ToArray());
+            IsSuccessful = false;
+        }
+
+        public ErrorResponse(Exception ex)
+        {
+            Errors = new Dictionary<string, string[]>();
+
+            Errors.Add("Message", new[] { ex.Message });
+
+            if (ex.InnerException != null)
+                Errors.Add("InnerMessage", new[] { ex.InnerException.Message });
+
+            string[] traces = ex.StackTrace.Split("  ");
+                Errors.Add("Traces", traces);
+
+            IsSuccessful = false;
         }
     }
 }
