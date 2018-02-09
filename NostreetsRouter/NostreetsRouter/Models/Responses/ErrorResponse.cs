@@ -33,10 +33,16 @@ namespace NostreetsRouter.Models.Responses
             Errors.Add("Message", new[] { ex.Message });
 
             if (ex.InnerException != null)
+            {
                 Errors.Add("InnerMessage", new[] { ex.InnerException.Message });
-
-            string[] traces = ex.StackTrace.Split("  ");
+                string[] traces = ex.InnerException.StackTrace.Split("  ");
                 Errors.Add("Traces", traces);
+            }
+            else
+            {
+                string[] traces = ex.StackTrace.Split("  ");
+                Errors.Add("Traces", traces);
+            }
 
             IsSuccessful = false;
         }
