@@ -20,24 +20,20 @@ namespace NostreetsRouter
         public BaseApiController()
         {
             _typeSrv = new EFDBService<T, IdType>();
-
-            Dictionary<object, Type> attr = new Dictionary<object, Type>();
-            attr.Add(typeof(T).Name + "/{action}", typeof(string));
-
-            this.AddAttribute<RouteAttribute>(false, attr, GetType().GetFields());
+            Dictionary<Type, object> attr = new Dictionary<Type, object>();
+            attr.Add(typeof(string), typeof(T).Name + "/{action}");
+            this.AddAttribute<RouteAttribute>(attr, false, GetType().GetFields());
         }
 
         public BaseApiController(string connectionKey)
         {
             _typeSrv = new EFDBService<T, IdType>(connectionKey);
-
-            Dictionary<object, Type> attr = new Dictionary<object, Type>();
-            attr.Add(typeof(T).Name + "/{action}", typeof(string));
-
-            this.AddAttribute<RouteAttribute>(false, attr, GetType().GetFields());
+            Dictionary<Type, object> attr = new Dictionary<Type, object>();
+            attr.Add(typeof(string), typeof(T).Name + "/{action}");
+            this.AddAttribute<RouteAttribute>(attr, false, GetType().GetFields());
         }
 
-        public BaseApiController(string connectionKey,  string serviceType)
+        public BaseApiController(string connectionKey, string serviceType)
         {
             switch (serviceType)
             {
@@ -54,10 +50,9 @@ namespace NostreetsRouter
                     break;
             }
 
-            Dictionary<object, Type> attr = new Dictionary<object, Type>();
-            attr.Add(typeof(T).Name + "/{action}", typeof(string));
-
-            this.AddAttribute<RouteAttribute>(false, attr, GetType().GetFields());
+            Dictionary<Type, object> attr = new Dictionary<Type, object>();
+            attr.Add(typeof(string), typeof(T).Name + "/{action}");
+            this.AddAttribute<RouteAttribute>(attr, false, GetType().GetFields());
         }
 
         IDBService<T, IdType> _typeSrv = null;
@@ -119,7 +114,7 @@ namespace NostreetsRouter
                 {
                     IdType id = _typeSrv.Insert(data);
                     ItemResponse<T> response = new ItemResponse<T>();
-                    return Request.CreateResponse(HttpStatusCode.OK, id); 
+                    return Request.CreateResponse(HttpStatusCode.OK, id);
                 }
                 else
                 {
