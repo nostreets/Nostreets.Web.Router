@@ -6,6 +6,28 @@ using System.Web;
 
 namespace NostreetsRouter.Models.Responses
 {
+    public class ErrorResponse<T> : ErrorResponse
+    {
+        public ErrorResponse(string errMsg, T data) : base(errMsg)
+        {
+            Data = data;
+        }
+
+        public ErrorResponse(IEnumerable<string> errMsgs, T data) : base(errMsgs)
+        {
+            Data = data;
+        }
+
+        public ErrorResponse(Exception ex, T data) : base(ex)
+        {
+            Data = data;
+        }
+
+
+        public T Data { get; set; }
+    }
+
+
     public class ErrorResponse : BaseResponse
     {
         public Dictionary<string, string[]> Errors { get; set; }
