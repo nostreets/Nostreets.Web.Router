@@ -9,6 +9,7 @@ using System.Net;
 using NostreetsEntities;
 using NostreetsExtensions;
 using NostreetsExtensions.Interfaces;
+using NostreetsExtensions.Extend.Basic;
 
 namespace NostreetsRouter
 {
