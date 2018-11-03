@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web.Http;
-using NostreetsRouter.Interfaces;
-using System.Net.Http;
-using NostreetsORM;
-using NostreetsRouter.Models.Responses;
 using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 using NostreetsEntities;
-using NostreetsExtensions;
-using NostreetsExtensions.Interfaces;
 using NostreetsExtensions.Extend.Basic;
+using NostreetsExtensions.Interfaces;
+using NostreetsORM;
+using NostreetsRouter.Interfaces;
+using NostreetsRouter.Models.Responses;
 
 namespace NostreetsRouter
 {
@@ -23,7 +22,7 @@ namespace NostreetsRouter
             _typeSrv = new EFDBService<T, IdType>();
             Dictionary<Type, object> attr = new Dictionary<Type, object>();
             attr.Add(typeof(string), typeof(T).Name + "/{action}");
-            this.AddAttribute<RouteAttribute>(attr, false, GetType().GetFields());
+            this.AddAttribute<RouteAttribute>("NostreetsRouter", attr, false, GetType().GetFields());
         }
 
         public BaseApiController(string connectionKey)
@@ -31,7 +30,7 @@ namespace NostreetsRouter
             _typeSrv = new EFDBService<T, IdType>(connectionKey);
             Dictionary<Type, object> attr = new Dictionary<Type, object>();
             attr.Add(typeof(string), typeof(T).Name + "/{action}");
-            this.AddAttribute<RouteAttribute>(attr, false, GetType().GetFields());
+            this.AddAttribute<RouteAttribute>("NostreetsRouter", attr, false, GetType().GetFields());
         }
 
         public BaseApiController(string connectionKey, string serviceType)
@@ -53,10 +52,10 @@ namespace NostreetsRouter
 
             Dictionary<Type, object> attr = new Dictionary<Type, object>();
             attr.Add(typeof(string), typeof(T).Name + "/{action}");
-            this.AddAttribute<RouteAttribute>(attr, false, GetType().GetFields());
+            this.AddAttribute<RouteAttribute>("NostreetsRouter", attr, false, GetType().GetFields());
         }
 
-        IDBService<T, IdType> _typeSrv = null;
+        private IDBService<T, IdType> _typeSrv = null;
 
         [HttpDelete]
         public HttpResponseMessage Delete(IdType id)
