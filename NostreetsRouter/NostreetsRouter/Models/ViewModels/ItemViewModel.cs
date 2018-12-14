@@ -7,6 +7,8 @@ namespace NostreetsRouter.Models.ViewModels
 {
     public class ItemViewModel<T> : BaseViewModel
     {
+        public ItemViewModel(T data) { Item = data; }
+
         public T Item { get; set; }
     }
 }

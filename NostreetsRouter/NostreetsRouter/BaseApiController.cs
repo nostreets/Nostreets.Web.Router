@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -20,17 +21,23 @@ namespace NostreetsRouter
         public BaseApiController()
         {
             _typeSrv = new EFDBService<T, IdType>();
-            Dictionary<Type, object> attr = new Dictionary<Type, object>();
-            attr.Add(typeof(string), typeof(T).Name + "/{action}");
-            this.AddAttribute<RouteAttribute>("NostreetsRouter", attr, false, GetType().GetFields());
+            var dic = new Dictionary<string, Dictionary<Type, object[]>>();
+
+            foreach (var method in GetType().GetMethods(System.Reflection.BindingFlags.Public))
+                dic.Add(method.Name, new Dictionary<Type, object[]>() { { typeof(RouteAttribute), new[] { typeof(T).Name + "/{action}" } } });
+
+            this.AddOrSetAttribute(dic);
         }
 
         public BaseApiController(string connectionKey)
         {
             _typeSrv = new EFDBService<T, IdType>(connectionKey);
-            Dictionary<Type, object> attr = new Dictionary<Type, object>();
-            attr.Add(typeof(string), typeof(T).Name + "/{action}");
-            this.AddAttribute<RouteAttribute>("NostreetsRouter", attr, false, GetType().GetFields());
+            var dic = new Dictionary<string, Dictionary<Type, object[]>>();
+
+            foreach (var method in GetType().GetMethods(System.Reflection.BindingFlags.Public))
+                dic.Add(method.Name, new Dictionary<Type, object[]>() { { typeof(RouteAttribute), new[] { typeof(T).Name + "/{action}" } } });
+
+            this.AddOrSetAttribute(dic);
         }
 
         public BaseApiController(string connectionKey, string serviceType)
@@ -50,9 +57,12 @@ namespace NostreetsRouter
                     break;
             }
 
-            Dictionary<Type, object> attr = new Dictionary<Type, object>();
-            attr.Add(typeof(string), typeof(T).Name + "/{action}");
-            this.AddAttribute<RouteAttribute>("NostreetsRouter", attr, false, GetType().GetFields());
+            var dic = new Dictionary<string, Dictionary<Type, object[]>>();
+
+            foreach (var method in GetType().GetMethods(System.Reflection.BindingFlags.Public))
+                dic.Add(method.Name, new Dictionary<Type, object[]>() { { typeof(RouteAttribute), new[] { typeof(T).Name + "/{action}" } } });
+
+            this.AddOrSetAttribute(dic);
         }
 
         private IDBService<T, IdType> _typeSrv = null;
