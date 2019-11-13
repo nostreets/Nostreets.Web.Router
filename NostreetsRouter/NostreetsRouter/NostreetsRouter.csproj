@@ -80,7 +80,7 @@
       <Project>{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}</Project>
       <Name>NostreetsORM</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\NostreetsSandbox\Nostreets Sandbox\Nostreets Services\Nostreets Services.csproj">
+    <ProjectReference Include="..\..\..\Nostreets-Sandbox\Nostreets Sandbox\Nostreets Services\Nostreets Services.csproj">
       <Project>{5574610e-7f20-4793-8d34-3c2c9c1322b8}</Project>
       <Name>Nostreets Services</Name>
     </ProjectReference>
