@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NostreetsRouter.Models.Responses
+namespace Nostreets.Web.Router.Models.Responses
 {
     /// <summary>
     /// This is an example of a Generic class that you will gain an understanding of

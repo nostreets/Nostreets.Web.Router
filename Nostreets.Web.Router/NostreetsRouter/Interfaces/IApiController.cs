@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NostreetsRouter.Interfaces
+namespace Nostreets.Web.Router.Interfaces
 {
     public interface IApiController<T, IdType>
     {

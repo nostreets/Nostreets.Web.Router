@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NostreetsRouter.Models
+namespace Nostreets.Web.Router.Models
 {
     public class PagedList<T>
     {

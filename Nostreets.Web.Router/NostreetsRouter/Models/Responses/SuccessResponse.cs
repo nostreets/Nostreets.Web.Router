@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NostreetsRouter.Models.Responses
+namespace Nostreets.Web.Router.Models.Responses
 {
     /// <summary>
     /// This class simply sets IsSuccesful to true by default.

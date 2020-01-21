@@ -1,21 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace NostreetsRouter.Models.ViewModels
+namespace Nostreets.Web.Router.Models
 {
-    public class ExternalLoginConfirmationViewModel : BaseViewModel
+    public class ExternalLoginConfirmationViewModel
     {
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
 
-    public class ExternalLoginListViewModel : BaseViewModel
+    public class ExternalLoginListViewModel
     {
         public string ReturnUrl { get; set; }
     }
 
-    public class SendCodeViewModel : BaseViewModel
+    public class SendCodeViewModel
     {
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
@@ -23,7 +23,7 @@ namespace NostreetsRouter.Models.ViewModels
         public bool RememberMe { get; set; }
     }
 
-    public class VerifyCodeViewModel : BaseViewModel
+    public class VerifyCodeViewModel
     {
         [Required]
         public string Provider { get; set; }
@@ -39,14 +39,14 @@ namespace NostreetsRouter.Models.ViewModels
         public bool RememberMe { get; set; }
     }
 
-    public class ForgotViewModel : BaseViewModel
+    public class ForgotViewModel
     {
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
 
-    public class LoginViewModel : BaseViewModel
+    public class LoginViewModel
     {
         [Required]
         [Display(Name = "Email")]
@@ -62,7 +62,7 @@ namespace NostreetsRouter.Models.ViewModels
         public bool RememberMe { get; set; }
     }
 
-    public class RegisterViewModel : BaseViewModel
+    public class RegisterViewModel
     {
         [Required]
         [EmailAddress]
@@ -81,7 +81,7 @@ namespace NostreetsRouter.Models.ViewModels
         public string ConfirmPassword { get; set; }
     }
 
-    public class ResetPasswordViewModel : BaseViewModel
+    public class ResetPasswordViewModel
     {
         [Required]
         [EmailAddress]
@@ -102,7 +102,7 @@ namespace NostreetsRouter.Models.ViewModels
         public string Code { get; set; }
     }
 
-    public class ForgotPasswordViewModel : BaseViewModel
+    public class ForgotPasswordViewModel
     {
         [Required]
         [EmailAddress]

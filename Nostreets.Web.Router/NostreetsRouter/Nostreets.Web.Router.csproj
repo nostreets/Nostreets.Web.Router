@@ -68,21 +68,17 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\NostreetsEntities\NostreetsEntities.csproj">
-      <Project>{f6c49237-723e-45ff-9c79-46a03ac80448}</Project>
-      <Name>NostreetsEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\NostreetsExtensions\NostreetsExtensions\NostreetsExtensions.csproj">
+    <ProjectReference Include="..\..\..\Nostreets.Extensions\Nostreets.Extensions\Nostreets.Extensions.csproj">
       <Project>{d75ef23c-2e65-4bf7-90d3-c21c73a3e9c3}</Project>
-      <Name>NostreetsExtensions</Name>
+      <Name>Nostreets.Extensions</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\NostreetsORM\NostreetsORM\NostreetsORM.csproj">
+    <ProjectReference Include="..\..\..\Nostreets.Orm.EF\Nostreets.Orm.EF.csproj">
+      <Project>{425a6c1e-79bc-4896-89dc-e9aa33295ebf}</Project>
+      <Name>Nostreets.Orm.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Nostreets.Orm.Ado\Nostreets.Orm.Ado\Nostreets.Orm.Ado.csproj">
       <Project>{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}</Project>
-      <Name>NostreetsORM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Nostreets-Sandbox\Nostreets Sandbox\Nostreets Services\Nostreets Services.csproj">
-      <Project>{5574610e-7f20-4793-8d34-3c2c9c1322b8}</Project>
-      <Name>Nostreets Services</Name>
+      <Name>Nostreets.Orm.Ado</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

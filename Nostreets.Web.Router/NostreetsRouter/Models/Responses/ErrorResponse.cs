@@ -1,9 +1,9 @@
-﻿using NostreetsExtensions.Extend.Basic;
+﻿using Nostreets.Extensions.Extend.Basic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NostreetsRouter.Models.Responses
+namespace Nostreets.Web.Router.Models.Responses
 {
     public class ErrorResponse<T> : ErrorResponse
     {
