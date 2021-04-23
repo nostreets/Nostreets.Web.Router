@@ -4,12 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Nostreets.Orm.EF;
 using Nostreets.Extensions.Extend.Basic;
 using Nostreets.Extensions.Interfaces;
 using Nostreets.Orm.Ado;
 using Nostreets.Web.Router.Interfaces;
 using Nostreets.Web.Router.Models.Responses;
+using NostreetsEntities;
 
 namespace Nostreets.Web.Router
 {
