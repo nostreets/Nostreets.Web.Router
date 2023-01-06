@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29215.179
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nostreets.Orm.Ado", "..\..\Nostreets.Orm.Ado\Nostreets.Orm.Ado\Nostreets.Orm.Ado.csproj", "{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nostreets.Orm.EF", "..\..\Nostreets.Orm.EF\Nostreets.Orm.EF.csproj", "{425A6C1E-79BC-4896-89DC-E9AA33295EBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nostreets.Extensions", "..\..\Nostreets.Extensions\Nostreets.Extensions\Nostreets.Extensions.csproj", "{D75EF23C-2E65-4BF7-90D3-C21C73A3E9C3}"
 EndProject
@@ -21,10 +19,6 @@ Global
 		{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E132F1C-F285-4535-ABEE-F02FC0BD18CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{425A6C1E-79BC-4896-89DC-E9AA33295EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{425A6C1E-79BC-4896-89DC-E9AA33295EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{425A6C1E-79BC-4896-89DC-E9AA33295EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{425A6C1E-79BC-4896-89DC-E9AA33295EBF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D75EF23C-2E65-4BF7-90D3-C21C73A3E9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D75EF23C-2E65-4BF7-90D3-C21C73A3E9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D75EF23C-2E65-4BF7-90D3-C21C73A3E9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
